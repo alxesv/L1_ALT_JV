@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Physics2D.Raycast(transform.position, Vector2.down, 1f, m_GroundLayer))
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.UpArrow))
             {
                 _isJump = true;
             }
