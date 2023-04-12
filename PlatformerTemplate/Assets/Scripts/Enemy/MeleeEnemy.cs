@@ -16,17 +16,18 @@ public class MeleeEnemy : MonoBehaviour
     private float cooldownTimer = Mathf.Infinity;
 
     [Header("Collide Damage Parameters")]
-    public int _healValue = -1;
+    public int collideDamage = 1;
 
     //References
-    private Animator anim;
     private PlayerHealth playerHealth;
+    private Animator anim;
     private EnemyPatrol enemyPatrol;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
         enemyPatrol = GetComponentInParent<EnemyPatrol>();
+        playerHealth = FindObjectOfType<PlayerHealth>();
     }
 
     private void Update()
@@ -77,8 +78,7 @@ public class MeleeEnemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            FindObjectOfType<PlayerHealth>().GainHealth(_healValue);
-            Destroy(gameObject);
+            playerHealth.LoseHealth(collideDamage);
         }
     }
 }

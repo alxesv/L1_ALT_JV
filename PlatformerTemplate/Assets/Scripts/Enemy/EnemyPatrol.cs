@@ -28,11 +28,15 @@ public class EnemyPatrol : MonoBehaviour
 
     private void OnDisable()
     {
+        if(anim == null) return;
         anim.SetBool("moving", false);
     }
 
     private void Update()
     {
+        if(enemy == null){
+            return;
+        }
         if (movingLeft)
         {
             if (enemy.position.x >= leftEdge.position.x)

@@ -6,10 +6,12 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField]
     private int _enemyHealth;
+    private bool alive;
 
     public void LoseHealth(int damage){
         _enemyHealth -= damage;
         if (_enemyHealth == 0){
+            alive = false;
             Destroy(gameObject);
         }
     }
