@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody2D _rigBod;
+    public Rigidbody2D _rigBod;
 
     [SerializeField]
     private LayerMask m_GroundLayer;
@@ -47,6 +47,15 @@ public class PlayerController : MonoBehaviour
         }
 
         _rigBod.velocity = new Vector2(m_MoveSpeed * _movement, _rigBod.velocity.y);
+
+        if(_movement > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        else if(_movement < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
     }
 
     public void Stop()

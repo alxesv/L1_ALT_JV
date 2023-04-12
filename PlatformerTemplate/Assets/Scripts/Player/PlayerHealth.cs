@@ -11,14 +11,14 @@ public class PlayerHealth : MonoBehaviour
     public Image[] hearts;
     public bool _isImmune = false;
     [SerializeField]
-    private float invulnFrameDuration = 0.5f;
+    private float invulnFrameDuration;
 
 
     void Start() {
         _playerHealth = 3;
         _maxHealth = 10;
     }
-    
+
     public IEnumerator invulnFrame(){
         _isImmune = true;
         yield return new WaitForSeconds(invulnFrameDuration);
