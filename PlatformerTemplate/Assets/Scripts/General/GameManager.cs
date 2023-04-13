@@ -13,8 +13,11 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private PlayerController m_Player;
 
-    private bool _isOver = false;
+    public bool _isOver = false;
 
+    void Awake(){
+        m_Player = FindObjectOfType<PlayerController>();
+    }
     public void FinishGame()
     {
         if (_isOver)
@@ -44,6 +47,6 @@ public class GameManager : MonoBehaviour
 
     public void BackToMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Menu");
     }
 }
