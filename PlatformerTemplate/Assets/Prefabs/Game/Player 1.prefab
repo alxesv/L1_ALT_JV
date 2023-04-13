@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5171688911319735323}
   - component: {fileID: 5171688911319735316}
   - component: {fileID: 5171688912270250138}
-  - component: {fileID: 5171688912270250136}
   - component: {fileID: 5171688912270250139}
   m_Layer: 0
   m_Name: Player 1
@@ -155,33 +154,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.95070934, y: 1.3690221}
   m_EdgeRadius: 0
---- !u!114 &5171688912270250136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5171688911319735327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83f94505f92cc4663a28454d3628b743, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerHealth: 0
-  _maxHealth: 0
-  hearts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _isImmune: 0
-  invulnFrameDuration: 0.5
 --- !u!114 &5171688912270250139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,17 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 0.5
   shootingPoint: {fileID: 5171688911361555339}
-  shotPrefabs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  shotPrefabs: []
 --- !u!1 &5171688911361555338
 GameObject:
   m_ObjectHideFlags: 0

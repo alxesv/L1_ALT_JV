@@ -4,26 +4,41 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField]
-    private int _enemyHealth;
-    private bool alive;
+    [SerializeField] private int _enemyHealth;
+    private Animator anim;
+    private bool dead;
+    public float delay;
 
-    public void LoseHealth(int damage){
+    // private bool alive;
+
+    // void Start(){
+    //     alive = true;
+    // }
+
+    private void Awake()
+    {
+        // currentHealth = startingHealth;
+        anim = GetComponent<Animator>();
+        // spriteRend = GetComponent<SpriteRenderer>();
+    }
+
+    public void LoseHealth(int damage)
+    {
         _enemyHealth -= damage;
-        if (_enemyHealth == 0){
-            alive = false;
-            Destroy(gameObject);
+        // Debug.Log("Enemy Health: " + _enemyHealth);
+        if (_enemyHealth > 0)
+        {
+            anim.SetTrigger("hurt");
+            // StartCoroutine(invulnFrame());
+        }
+        else
+        {
+            GetComponent<Collider2D>().enabled = false;
+            anim.SetTrigger("die");
         }
     }
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void Die(){
+        Destroy(gameObject);
     }
 }

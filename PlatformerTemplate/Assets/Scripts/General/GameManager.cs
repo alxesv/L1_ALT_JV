@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private PlayerController m_Player;
 
-    private bool _isOver = false;
+    public bool _isOver = false;
 
     public void FinishGame()
     {

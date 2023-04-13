@@ -12,14 +12,10 @@ public class Shot : MonoBehaviour
     private float duration;
     private float direction;
 
-    void Awake() {
+    void Awake()
+    {
         boxCollider = GetComponent<BoxCollider2D>();
         rigidBod = GetComponent<Rigidbody2D>();
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
     }
 
     // Update is called once per frame
@@ -33,9 +29,11 @@ public class Shot : MonoBehaviour
         if (duration > 3) Deactivate();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision){
-        if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "NotHit" ) return;
-        if(collision.gameObject.tag == "Enemy"){
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "NotHit") return;
+        if (collision.gameObject.tag == "Enemy")
+        {
             collision.gameObject.GetComponent<EnemyHealth>().LoseHealth(1);
         }
         hit = true;
@@ -43,7 +41,8 @@ public class Shot : MonoBehaviour
         Deactivate();
     }
 
-    public void SetDirection (float _direction){
+    public void SetDirection(float _direction)
+    {
         duration = 0;
         direction = _direction;
         gameObject.SetActive(true);
@@ -51,13 +50,15 @@ public class Shot : MonoBehaviour
         boxCollider.enabled = true;
 
         float localScaleX = transform.localScale.x;
-        if(Mathf.Sign(localScaleX) != _direction){
+        if (Mathf.Sign(localScaleX) != _direction)
+        {
             localScaleX = -localScaleX;
         }
         transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
     }
 
-    private void Deactivate(){
+    private void Deactivate()
+    {
         gameObject.SetActive(false);
     }
 }
