@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private LayerMask m_GroundLayer;
+    [SerializeField]
+    private LayerMask m_EnemyLayer;
 
     [SerializeField]
     private float m_JumpForce;
@@ -48,11 +50,11 @@ public class PlayerController : MonoBehaviour
 
         _rigBod.velocity = new Vector2(m_MoveSpeed * _movement, _rigBod.velocity.y);
 
-        if(_movement > 0)
+        if (_movement > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
-        else if(_movement < 0)
+        else if (_movement < 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
