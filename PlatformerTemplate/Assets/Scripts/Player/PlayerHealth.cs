@@ -20,8 +20,10 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public IEnumerator invulnFrame(){
+        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.5f);
         _isImmune = true;
         yield return new WaitForSeconds(invulnFrameDuration);
+        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         _isImmune = false;
     }
 
@@ -33,6 +35,7 @@ public class PlayerHealth : MonoBehaviour
         _playerHealth -= damage;
 
         if (_playerHealth == 0){
+            GetComponent<PlayerController>().Stop();
             FindObjectOfType<GameManager>().GameOver();
         }
         

@@ -5,13 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+
+    public void survival(){
+        SceneManager.LoadScene("Main Alex");
+    }
+
+    public void normal(){
+        SceneManager.LoadScene("Main Kevin");
+    }
     public void Quit()
     {
         Application.Quit();
     }
 
-    public void Play()
-    {
-        SceneManager.LoadScene(1);
-    }
 }
