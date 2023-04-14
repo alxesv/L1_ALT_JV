@@ -8,7 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 71b484d06243a644eb9df1e09666aa9e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Scenes/Main Kevin.unity
+    guid: bd63e6f0f13254532b49e0dd0b9c9ce7
+  - enabled: 1
+    path: Assets/Scenes/Main Alex.unity
+    guid: 659e5c3799dcc426a87eeb4e0f80128e
+  - enabled: 1
+    path: Assets/Scenes/Map 1.unity
+    guid: d37cde1e9bd7d448282258a41e350e34
   m_configObjects: {}

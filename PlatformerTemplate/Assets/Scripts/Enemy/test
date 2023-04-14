@@ -1,0 +1,28 @@
+public void LoseHealth(int damage)
+    {
+        if (_isImmune)
+            return;
+        _enemyHealth -= damage;
+        if (_enemyHealth > 0)
+        {
+            anim.SetTrigger("hurt");
+            StartCoroutine(invulnFrame());
+        }
+        else
+        {
+            if (!dead)
+            {
+                anim.SetTrigger("die");
+                if (GetComponentInParent<EnemyPatrol>() != null)
+                    GetComponentInParent<EnemyPatrol>().enabled = false;
+
+                if (GetComponentInParent<MeleeEnemy>() != null)
+                    GetComponentInParent<MeleeEnemy>().enabled = false;
+
+                if (GetComponentInParent<RangedEnemy>() != null)
+                    GetComponentInParent<RangedEnemy>().enabled = false;
+
+                dead = true;
+            }
+        }
+    }

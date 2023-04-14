@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody2D _rigBod;
+    public Rigidbody2D _rigBod;
 
     [SerializeField]
     private LayerMask m_GroundLayer;
+    [SerializeField]
+    private LayerMask m_EnemyLayer;
 
     [SerializeField]
     private float m_JumpForce;
@@ -17,18 +19,24 @@ public class PlayerController : MonoBehaviour
 
     private float _movement;
     private bool _isJump;
+    private GameManager _gameManager;
 
     private void Awake()
     {
+        _gameManager = FindObjectOfType<GameManager>();
         _rigBod = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(_gameManager._isOver)
+        {
+            return;
+        }
         if (Physics2D.Raycast(transform.position, Vector2.down, 1f, m_GroundLayer))
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.UpArrow))
             {
                 _isJump = true;
             }
@@ -47,6 +55,15 @@ public class PlayerController : MonoBehaviour
         }
 
         _rigBod.velocity = new Vector2(m_MoveSpeed * _movement, _rigBod.velocity.y);
+
+        if (_movement > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        else if (_movement < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
     }
 
     public void Stop()
