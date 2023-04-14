@@ -18807,11 +18807,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5171688911319735321, guid: 2d0121430d77c4d158fce5ddd7e9633f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.45
+      value: -16.8
       objectReference: {fileID: 0}
     - target: {fileID: 5171688911319735321, guid: 2d0121430d77c4d158fce5ddd7e9633f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.96
+      value: 0.88
       objectReference: {fileID: 0}
     - target: {fileID: 5171688911319735321, guid: 2d0121430d77c4d158fce5ddd7e9633f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18978,7 +18978,7 @@ GameObject:
   - component: {fileID: 1071424888}
   m_Layer: 7
   m_Name: EnemyPush
-  m_TagString: Enemy
+  m_TagString: NotHit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36263,7 +36263,7 @@ GameObject:
   - component: {fileID: 412182010960470829}
   m_Layer: 6
   m_Name: Idle (1)
-  m_TagString: Untagged
+  m_TagString: NotHit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36314,7 +36314,7 @@ GameObject:
   - component: {fileID: 4242174832906757604}
   m_Layer: 6
   m_Name: Idle
-  m_TagString: Untagged
+  m_TagString: NotHit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37688,7 +37688,7 @@ GameObject:
   - component: {fileID: 7554626269750026347}
   m_Layer: 6
   m_Name: Spikes (1)
-  m_TagString: Enemy
+  m_TagString: NotHit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37706,7 +37706,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -4.9334865, y: 0.083314896}
+  m_Offset: {x: -4.55366, y: 0.083314896}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -37717,7 +37717,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2488604, y: 0.35209656}
+  m_Size: {x: 1.489212, y: 0.3212615}
   m_EdgeRadius: 0
 --- !u!1 &7668247110944056931
 GameObject:
@@ -37734,7 +37734,7 @@ GameObject:
   - component: {fileID: 7668247110944056954}
   m_Layer: 7
   m_Name: EnemyPush
-  m_TagString: Enemy
+  m_TagString: NotHit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38020,7 +38020,7 @@ GameObject:
   - component: {fileID: 7897879046551707852}
   m_Layer: 6
   m_Name: Spikes
-  m_TagString: Enemy
+  m_TagString: NotHit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

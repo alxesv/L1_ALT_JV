@@ -19,15 +19,21 @@ public class PlayerController : MonoBehaviour
 
     private float _movement;
     private bool _isJump;
+    private GameManager _gameManager;
 
     private void Awake()
     {
+        _gameManager = FindObjectOfType<GameManager>();
         _rigBod = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(_gameManager._isOver)
+        {
+            return;
+        }
         if (Physics2D.Raycast(transform.position, Vector2.down, 1f, m_GroundLayer))
         {
             if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.UpArrow))

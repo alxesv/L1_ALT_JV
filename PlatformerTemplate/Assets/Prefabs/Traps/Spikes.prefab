@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 4613052681594991208}
   m_Layer: 6
   m_Name: Idle
-  m_TagString: Untagged
+  m_TagString: NotHit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 6586824306930437142}
   m_Layer: 6
   m_Name: Idle (2)
-  m_TagString: Untagged
+  m_TagString: NotHit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 9179387359122781345}
   m_Layer: 6
   m_Name: Idle (1)
-  m_TagString: Untagged
+  m_TagString: NotHit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
