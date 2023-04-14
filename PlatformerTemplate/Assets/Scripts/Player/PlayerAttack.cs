@@ -15,6 +15,7 @@ public class PlayerAttack : MonoBehaviour
     public AudioSource shotSound;
 
     void Awake(){
+        shootingPoint = GameObject.Find("ShootingPoint").transform;
         shotSoundHolder = GameObject.Find("ShootingPoint");
         shotSound = shotSoundHolder.GetComponent<AudioSource>();
         playerController = GetComponent<PlayerController>();
