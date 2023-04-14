@@ -186,6 +186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeleeEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8839027280293699005, guid: 7d074851bfe764af2bbd482193c7aa8c, type: 3}
+      propertyPath: _enemyHealth
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d074851bfe764af2bbd482193c7aa8c, type: 3}
 --- !u!1 &1535522483851050372 stripped
