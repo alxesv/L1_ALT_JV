@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5171688911319735320}
   - component: {fileID: 5171688911319735323}
   - component: {fileID: 5171688911319735316}
-  - component: {fileID: 5171688912270250138}
   - component: {fileID: 5171688912270250139}
+  - component: {fileID: 7594210578502808590}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -126,34 +126,11 @@ MonoBehaviour:
   m_GroundLayer:
     serializedVersion: 2
     m_Bits: 64
+  m_EnemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
   m_JumpForce: 10
   m_MoveSpeed: 7
---- !u!61 &5171688912270250138
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5171688911319735327}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0035207272, y: -0.008802056}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.45}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.95070934, y: 1.3690221}
-  m_EdgeRadius: 0
 --- !u!114 &5171688912270250139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,6 +146,22 @@ MonoBehaviour:
   cooldown: 0.5
   shootingPoint: {fileID: 5171688911361555339}
   shotPrefabs: []
+--- !u!70 &7594210578502808590
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5171688911319735327}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.02044642, y: -0.040893137}
+  m_Size: {x: 0.8854997, y: 1.3682138}
+  m_Direction: 0
 --- !u!1 &5171688911361555338
 GameObject:
   m_ObjectHideFlags: 0
