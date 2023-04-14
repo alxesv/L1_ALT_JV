@@ -12,11 +12,13 @@ public class PlayerHealth : MonoBehaviour
     public bool _isImmune = false;
     [SerializeField]
     private float invulnFrameDuration;
+    public AudioSource audioSource;
 
 
     void Start() {
         _playerHealth = 3;
         _maxHealth = 10;
+        audioSource = GetComponent<AudioSource>();
     }
 
     public IEnumerator invulnFrame(){
@@ -44,6 +46,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void GainHealth(int healing){
         if(_playerHealth < _maxHealth){
+            audioSource.Play();
             _playerHealth += healing;
         }else {
             return;

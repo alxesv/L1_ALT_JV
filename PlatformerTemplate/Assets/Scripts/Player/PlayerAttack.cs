@@ -11,8 +11,12 @@ public class PlayerAttack : MonoBehaviour
     private PlayerController playerController;
     public Transform shootingPoint;
     public GameObject[] shotPrefabs;
+    public GameObject shotSoundHolder;
+    public AudioSource shotSound;
 
     void Awake(){
+        shotSoundHolder = GameObject.Find("ShootingPoint");
+        shotSound = shotSoundHolder.GetComponent<AudioSource>();
         playerController = GetComponent<PlayerController>();
     }
 
@@ -26,6 +30,7 @@ public class PlayerAttack : MonoBehaviour
     }
 
     private void Attack(){
+        shotSound.Play();
         cooldownTimer = 0;
         shotPrefabs[FindShot()].transform.position = shootingPoint.position;
         shotPrefabs[FindShot()].GetComponent<Shot>().SetDirection(Mathf.Sign(transform.localScale.x));
