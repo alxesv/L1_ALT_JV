@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 2286503527445208116}
   m_Layer: 6
   m_Name: PushPatrol
-  m_TagString: Enemy
+  m_TagString: NotHit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

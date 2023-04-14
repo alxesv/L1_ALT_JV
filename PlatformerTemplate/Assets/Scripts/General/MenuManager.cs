@@ -11,7 +11,7 @@ public class MenuManager : MonoBehaviour
     }
 
     public void normal(){
-        SceneManager.LoadScene("Main Kevin");
+        SceneManager.LoadScene("Map 1");
     }
     public void Quit()
     {
